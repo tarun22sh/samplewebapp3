@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/target/java-web-app-with-embedded-tomcat-1.0.0-SNAPSHOT.jar'
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'testit123'
           slot-name: 'Production'
-          package: '*.jar'
+          package: 'java-web-app-with-embedded-tomcat-1.0.0-SNAPSHOT.jar'
           
